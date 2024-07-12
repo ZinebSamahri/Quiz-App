@@ -90,14 +90,5 @@ def view_results():
     conn.close()
     return render_template('view_results.html', results=rows)
 
-@app.route('/boss_view')
-def boss_view():
-    conn = sqlite3.connect('quiz_results.db')
-    c = conn.cursor()
-    c.execute('SELECT emp_id, first_name, last_name, SUM(correct), SUM(wrong), AVG(success_percentage) FROM results GROUP BY emp_id')
-    rows = c.fetchall()
-    conn.close()
-    return render_template('boss_view.html', results=rows)
-
 if __name__ == '__main__':
     app.run(debug=True)
