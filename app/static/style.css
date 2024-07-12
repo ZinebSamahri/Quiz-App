@@ -1,0 +1,16 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: #343a40;
+}
+
+.table {
+    background-color: #ffffff;
+}
+
+.form-check-label {
+    font-size: 1.1em;
+}
